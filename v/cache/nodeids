@@ -1,0 +1,19 @@
+[
+  "tests/test_core.py::TestAlert::test_brute_force_detection",
+  "tests/test_core.py::TestAlert::test_create_alert_structure",
+  "tests/test_core.py::TestAlert::test_dos_detection",
+  "tests/test_core.py::TestAlert::test_get_recent_alerts_returns_list",
+  "tests/test_core.py::TestAlert::test_portscan_detection",
+  "tests/test_core.py::TestAlert::test_severity_critical",
+  "tests/test_core.py::TestAlert::test_severity_high",
+  "tests/test_core.py::TestDataGenerator::test_columns",
+  "tests/test_core.py::TestDataGenerator::test_labels",
+  "tests/test_core.py::TestDataGenerator::test_no_negative_bytes",
+  "tests/test_core.py::TestDataGenerator::test_shape",
+  "tests/test_core.py::TestModelIntegration::test_model_loads",
+  "tests/test_core.py::TestModelIntegration::test_prediction_output",
+  "tests/test_core.py::TestModelIntegration::test_proba_range",
+  "tests/test_core.py::TestPreprocessor::test_preprocess_shape",
+  "tests/test_core.py::TestPreprocessor::test_preprocess_single_shape",
+  "tests/test_core.py::TestPreprocessor::test_scaled_range"
+]
