@@ -1,0 +1,445 @@
+{% extends "base.html" %}
+{% block title %}Threat Intelligence Center — NetGuard AI{% endblock %}
+{% block page_title %}Threat Intelligence Center{% endblock %}
+{% block page_sub %}Real-time anomaly investigation and response monitoring{% endblock %}
+
+{% block head %}
+<style>
+
+.critical-fill{
+    background:linear-gradient(90deg,var(--danger),#ff8ca0);
+}
+
+.high-fill{
+    background:linear-gradient(90deg,var(--warn),#ffd38a);
+}
+
+.normal-fill{
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+}
+
+.progress-fill{
+    height:100%;
+    background:#4f8aff;
+    border-radius:99px;
+}
+
+.alert-summary{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:14px;
+    margin-bottom:20px;
+}
+
+.summary-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:18px;
+    position:relative;
+    overflow:hidden;
+}
+
+.summary-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:2px;
+}
+
+.summary-card.critical::before{background:var(--danger);}
+.summary-card.high::before{background:var(--warn);}
+.summary-card.medium::before{background:var(--med);}
+.summary-card.low::before{background:var(--low);}
+
+.summary-label{
+    font-size:11px;
+    text-transform:uppercase;
+    color:var(--muted);
+    letter-spacing:.8px;
+}
+
+.summary-value{
+    font-size:2rem;
+    font-weight:700;
+    font-family:var(--mono);
+    margin-top:6px;
+}
+
+.alert-toolbar{
+    display:flex;
+    gap:12px;
+    margin-bottom:18px;
+    flex-wrap:wrap;
+}
+
+.search-box{
+    flex:1;
+    min-width:240px;
+}
+
+.search-box input{
+    width:100%;
+}
+
+.filter-btn{
+    border:1px solid var(--border2);
+    background:var(--surface);
+    color:var(--text);
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:12px;
+}
+
+.filter-btn.active{
+    background:rgba(79,138,255,.12);
+    border-color:var(--accent);
+    color:var(--accent);
+}
+
+.alert-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:12px;
+    margin-bottom:14px;
+    overflow:hidden;
+    transition:.25s;
+}
+
+.alert-card:hover{
+    transform:translateY(-2px);
+    border-color:var(--accent);
+}
+
+.alert-card.critical{
+    border-left:4px solid var(--danger);
+}
+
+.alert-card.high{
+    border-left:4px solid var(--warn);
+}
+
+.alert-card.medium{
+    border-left:4px solid var(--med);
+}
+
+.alert-card.low{
+    border-left:4px solid var(--low);
+}
+
+.alert-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 18px;
+    border-bottom:1px solid rgba(99,130,255,.08);
+}
+
+.alert-title{
+    font-size:15px;
+    font-weight:600;
+}
+
+.alert-time{
+    color:var(--muted);
+    font-size:11px;
+    font-family:var(--mono);
+}
+
+.alert-body{
+    padding:16px 18px;
+}
+
+.confidence-row{
+    margin-top:12px;
+}
+
+.confidence-label{
+    display:flex;
+    justify-content:space-between;
+    font-size:11px;
+    margin-bottom:6px;
+}
+
+.metric-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:15px;
+}
+
+.metric-box{
+    background:var(--bg3);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:10px;
+}
+
+.metric-box .label{
+    color:var(--muted);
+    font-size:10px;
+    text-transform:uppercase;
+}
+
+.metric-box .value{
+    margin-top:4px;
+    font-family:var(--mono);
+    font-weight:600;
+}
+
+.alert-count{
+    background:rgba(79,138,255,.1);
+    color:var(--accent);
+    border:1px solid rgba(79,138,255,.2);
+    padding:5px 10px;
+    border-radius:6px;
+    font-size:11px;
+}
+
+.hidden-alert{
+    display:none;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="mb-4">
+    <span class="tag">NETGUARD AI</span>
+    <h2 class="mt-2 mb-1">Threat Intelligence Center</h2>
+    <p class="text-muted mb-0">
+        Monitor, investigate and prioritize detected security anomalies.
+    </p>
+</div>
+
+{% set critical = alerts|selectattr("severity","equalto","CRITICAL")|list|length %}
+{% set high = alerts|selectattr("severity","equalto","HIGH")|list|length %}
+{% set medium = alerts|selectattr("severity","equalto","MEDIUM")|list|length %}
+{% set low = alerts|selectattr("severity","equalto","LOW")|list|length %}
+
+<div class="alert-summary">
+
+    <div class="summary-card critical">
+        <div class="summary-label">Critical Threats</div>
+        <div class="summary-value" style="color:var(--danger)">
+            {{ critical }}
+        </div>
+    </div>
+
+    <div class="summary-card high">
+        <div class="summary-label">High Severity</div>
+        <div class="summary-value" style="color:var(--warn)">
+            {{ high }}
+        </div>
+    </div>
+
+    <div class="summary-card medium">
+        <div class="summary-label">Medium Severity</div>
+        <div class="summary-value" style="color:var(--med)">
+            {{ medium }}
+        </div>
+    </div>
+
+    <div class="summary-card low">
+        <div class="summary-label">Total Alerts</div>
+        <div class="summary-value" style="color:var(--accent)">
+            {{ alerts|length }}
+        </div>
+    </div>
+
+</div>
+
+<div class="card mb-4">
+    <div class="card-body">
+
+        <div class="alert-toolbar">
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchAlerts"
+                    class="form-control"
+                    placeholder="Search threat type..."
+                >
+            </div>
+
+            <button class="filter-btn active" onclick="filterSeverity('ALL',this)">All</button>
+            <button class="filter-btn" onclick="filterSeverity('CRITICAL',this)">Critical</button>
+            <button class="filter-btn" onclick="filterSeverity('HIGH',this)">High</button>
+            <button class="filter-btn" onclick="filterSeverity('MEDIUM',this)">Medium</button>
+            <button class="filter-btn" onclick="filterSeverity('LOW',this)">Low</button>
+
+            <div class="alert-count">
+                {{ alerts|length }} Records
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+{% if not alerts %}
+
+<div class="card">
+    <div class="empty-state">
+        <i class="fas fa-shield-check"></i>
+        <h5>No Security Incidents</h5>
+        <p>No threats have been detected yet.</p>
+    </div>
+</div>
+
+{% else %}
+
+<div id="alertsContainer">
+
+{% for a in alerts %}
+
+<div
+class="alert-card {{ a.severity.lower() }}"
+data-severity="{{ a.severity }}"
+data-type="{{ a.anomaly_type|lower }}"
+>
+
+    <div class="alert-header">
+
+        <div>
+            <div class="alert-title">
+                {{ a.anomaly_type }}
+            </div>
+
+            <div style="margin-top:6px">
+                <span class="sev sev-{{ a.severity.lower() }}">
+                    {{ a.severity }}
+                </span>
+            </div>
+        </div>
+
+        <div class="alert-time">
+            {{ a.timestamp[:19].replace('T',' ') }}
+        </div>
+
+    </div>
+
+```html
+<div class="alert-body">
+
+    <div style="font-size:13px;margin-bottom:12px;">
+        {{ a.message }}
+    </div>
+
+    <div class="confidence-row">
+
+        <div class="confidence-label">
+            <span>Detection Confidence</span>
+            <span>{{ a.confidence }}%</span>
+        </div>
+
+        <div class="progress" style="height:8px;">
+            <div
+                class="progress-bar bg-primary"
+                role="progressbar"
+                style="width: {{ a.confidence }}%">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="metric-grid">
+
+        <div class="metric-box">
+            <div class="label">Bytes Sent</div>
+            <div class="value">
+                {{ a.record.bytes_sent|default('N/A') }}
+            </div>
+        </div>
+
+        <div class="metric-box">
+            <div class="label">Connections</div>
+            <div class="value">
+                {{ a.record.num_connections|default('N/A') }}
+            </div>
+        </div>
+
+        <div class="metric-box">
+            <div class="label">Failed Logins</div>
+            <div class="value">
+                {{ a.record.failed_logins|default('N/A') }}
+            </div>
+        </div>
+
+    </div>
+
+</div>
+```
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+
+let activeSeverity = "ALL";
+
+function filterSeverity(severity, btn){
+
+    activeSeverity = severity;
+
+    document.querySelectorAll('.filter-btn')
+    .forEach(x => x.classList.remove('active'));
+
+    btn.classList.add('active');
+
+    applyFilters();
+}
+
+document.getElementById('searchAlerts')
+.addEventListener('input', applyFilters);
+
+function applyFilters(){
+
+    const search =
+        document.getElementById('searchAlerts')
+        .value
+        .toLowerCase();
+
+    document.querySelectorAll('.alert-card')
+    .forEach(card => {
+
+        const severity =
+            card.dataset.severity;
+
+        const type =
+            card.dataset.type;
+
+        const matchSeverity =
+            activeSeverity === 'ALL'
+            || severity === activeSeverity;
+
+        const matchSearch =
+            type.includes(search);
+
+        card.classList.toggle(
+            'hidden-alert',
+            !(matchSeverity && matchSearch)
+        );
+    });
+}
+
+</script>
+
+<script>
+document.querySelectorAll('.progress-fill').forEach(el=>{
+    el.style.width = el.dataset.width + '%';
+});
+</script> 
+
+{% endblock %}

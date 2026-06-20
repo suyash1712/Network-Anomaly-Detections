@@ -1,0 +1,369 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — NetGuard AI{% endblock %}
+{% block page_title %}Live Dashboard{% endblock %}
+{% block page_sub %}Real-time network anomaly monitoring{% endblock %}
+
+{% block head %}
+<style>
+  /* Activity feed */
+  .feed-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(99,130,255,0.06);
+    transition: background .12s;
+    animation: feedIn .3s ease both;
+  }
+  @keyframes feedIn { from{opacity:0;transform:translateX(-8px)} to{opacity:1;transform:none} }
+  .feed-item:hover { background: var(--surface2); }
+  .feed-item:last-child { border-bottom: none; }
+  .feed-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    margin-top: 5px; flex-shrink: 0;
+  }
+  .feed-dot.critical { background: var(--danger); box-shadow: 0 0 8px var(--danger); animation: glow-ring 2s infinite; }
+  .feed-dot.high     { background: var(--warn);   box-shadow: 0 0 6px var(--warn); }
+  .feed-dot.medium   { background: var(--med); }
+  .feed-dot.low      { background: var(--low); }
+  .feed-dot.normal   { background: var(--ok); }
+  .feed-text { flex: 1; min-width: 0; }
+  .feed-title { font-size: 13px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .feed-meta  { font-size: 11px; color: var(--muted); margin-top: 1px; }
+  .feed-time  { font-family: var(--mono); font-size: 10px; color: var(--muted); white-space: nowrap; }
+
+  /* Confidence bar */
+  .conf-bar-wrap { display:flex;align-items:center;gap:8px; }
+  .conf-bar { flex:1; height:5px; background:var(--surface2); border-radius:99px; overflow:hidden; }
+  .conf-fill { height:100%; border-radius:99px; background: linear-gradient(90deg,var(--accent),var(--accent2)); }
+  .conf-fill.danger { background: linear-gradient(90deg,var(--danger),#ff8fa3); }
+
+  /* Sim panel */
+  .sim-result-card {
+    border-radius: 10px; padding: 18px;
+    border: 1px solid var(--border);
+    background: var(--bg3);
+    transition: all .3s;
+  }
+  .sim-result-card.anomaly { border-color: rgba(255,69,96,.35); background: rgba(255,69,96,.04); }
+  .sim-result-card.normal  { border-color: rgba(0,224,158,.25); background: rgba(0,224,158,.03); }
+
+  /* Threat type pill */
+  .threat-pill {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 4px 10px; border-radius: 99px;
+    font-size: 11px; font-weight: 600; font-family: var(--mono);
+  }
+  .threat-pill.dos    { background:rgba(255,69,96,.12);  color:var(--danger); }
+  .threat-pill.brute  { background:rgba(255,168,37,.12); color:var(--warn);   }
+  .threat-pill.scan   { background:rgba(245,200,66,.1);  color:var(--med);    }
+  .threat-pill.exfil  { background:rgba(123,95,255,.12); color:#a78bfa;       }
+  .threat-pill.normal { background:rgba(0,224,158,.1);   color:var(--ok);     }
+
+  /* Model metric row */
+  .model-row { display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid var(--border); }
+  .model-row:last-child { border-bottom:none; }
+  .model-name { width:130px; font-weight:600; font-size:13px; }
+  .model-metrics { flex:1; display:flex; gap:16px; }
+  .metric-pill { text-align:center; }
+  .metric-pill .val { font-family:var(--mono); font-weight:700; font-size:14px; }
+  .metric-pill .lbl { font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.5px; }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Top actions bar -->
+<div class="d-flex align-items-center justify-content-between mb-4">
+  <div style="display:flex;align-items:center;gap:8px">
+    <div class="live-dot" style="width:9px;height:9px"></div>
+    <span style="font-size:12px;color:var(--ok);font-weight:500">Monitoring active</span>
+    <span style="color:var(--border2)">·</span>
+    <span style="font-size:12px;color:var(--muted)" id="lastRefresh">Refreshing…</span>
+  </div>
+  <button class="btn-primary" id="simBtn" onclick="simulateTraffic()">
+    <i class="fas fa-bolt" style="margin-right:6px"></i>Simulate Traffic
+  </button>
+</div>
+
+<!-- Stat row -->
+<div class="row g-3 mb-4">
+  <div class="col-6 col-md-3">
+    <div class="stat-card danger">
+      <div class="stat-glow"></div>
+      <div class="stat-label"><i class="fas fa-triangle-exclamation" style="margin-right:5px"></i>Total Alerts</div>
+      <div class="stat-value danger mono" id="statTotal">{{ stats.total }}</div>
+      <div class="stat-delta">All time</div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="stat-card danger">
+      <div class="stat-glow"></div>
+      <div class="stat-label"><i class="fas fa-skull-crossbones" style="margin-right:5px"></i>Critical</div>
+      <div class="stat-value danger mono" id="statCrit">{{ stats.by_severity.get('CRITICAL', 0) }}</div>
+      <div class="stat-delta">Immediate action</div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="stat-card warn">
+      <div class="stat-glow"></div>
+      <div class="stat-label"><i class="fas fa-fire" style="margin-right:5px"></i>High Severity</div>
+      <div class="stat-value warn mono" id="statHigh">{{ stats.by_severity.get('HIGH', 0) }}</div>
+      <div class="stat-delta">Investigate soon</div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="stat-card ok">
+      <div class="stat-glow"></div>
+      <div class="stat-label"><i class="fas fa-microchip" style="margin-right:5px"></i>Model Accuracy</div>
+      <div class="stat-value ok mono">{{ (metrics.get('Random Forest', {}).get('accuracy', 0) * 100) | round(1) }}%</div>
+      <div class="stat-delta">Random Forest</div>
+    </div>
+  </div>
+</div>
+
+<!-- Main content row -->
+<div class="row g-3 mb-3">
+  <!-- Alert feed -->
+  <div class="col-lg-7">
+    <div class="card scanline-wrap" style="height:360px;display:flex;flex-direction:column">
+      <div class="card-header">
+        <div class="header-icon"><i class="fas fa-rss"></i></div>
+        Threat Feed
+        <div class="ms-auto" style="display:flex;align-items:center;gap:8px">
+          <div class="live-dot"></div>
+          <span style="font-size:11px;color:var(--ok)">Live</span>
+          <a href="/alerts" style="font-size:11px;color:var(--accent);text-decoration:none;margin-left:8px">View all →</a>
+        </div>
+      </div>
+      <div id="alertFeed" style="overflow-y:auto;flex:1">
+        <div class="empty-state"><i class="fas fa-satellite-dish"></i><p>Waiting for traffic…</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sim result + threat breakdown -->
+  <div class="col-lg-5">
+    <div class="card" style="height:360px;display:flex;flex-direction:column">
+      <div class="card-header">
+        <div class="header-icon"><i class="fas fa-radar"></i></div>
+        Analysis Result
+      </div>
+      <div class="card-body" style="flex:1;overflow-y:auto" id="simPanel">
+        <div class="empty-state">
+          <i class="fas fa-crosshairs"></i>
+          <p>Click <strong>Simulate Traffic</strong> to analyze a live network record and see the AI verdict here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Model comparison + threat distribution -->
+<div class="row g-3">
+  {% if metrics %}
+  <div class="col-lg-7">
+    <div class="card">
+      <div class="card-header">
+        <div class="header-icon"><i class="fas fa-robot"></i></div>
+        Model Comparison
+        <a href="/metrics" class="ms-auto" style="font-size:11px;color:var(--accent);text-decoration:none">Details →</a>
+      </div>
+      <div class="card-body">
+        {% for model_name, m in metrics.items() %}
+        <div class="model-row">
+          <div class="model-name">{{ model_name }}</div>
+          <div class="model-metrics">
+            <div class="metric-pill">
+              <div class="val" style="color:var(--ok)">{{ (m.accuracy*100)|round(1) }}%</div>
+              <div class="lbl">Accuracy</div>
+            </div>
+            <div class="metric-pill">
+              <div class="val" style="color:var(--accent)">{{ (m.f1*100)|round(1) }}%</div>
+              <div class="lbl">F1</div>
+            </div>
+            <div class="metric-pill">
+              <div class="val" style="color:var(--warn)">{{ m.roc_auc }}</div>
+              <div class="lbl">AUC</div>
+            </div>
+          </div>
+          <div>
+            <div class="progress-track" style="width:80px;height:6px">
+              <div class="progress-fill" style="width:{{ (m.accuracy*100)|round(0) }}%;background:linear-gradient(90deg,var(--accent),var(--accent2))"></div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="col-lg-5">
+    <div class="card">
+      <div class="card-header">
+        <div class="header-icon"><i class="fas fa-chart-pie"></i></div>
+        Threat Distribution
+      </div>
+      <div class="card-body" id="threatDist">
+        <div class="empty-state" style="padding:20px"><i class="fas fa-chart-pie"></i><p>No data yet</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const SEV_CLASS = { CRITICAL:'critical', HIGH:'high', MEDIUM:'medium', LOW:'low' };
+const THREAT_CLASS = {
+  'DoS / Flood Attack':'dos','Brute Force Attack':'brute',
+  'Port Scan':'scan','Data Exfiltration':'exfil','Normal':'normal','Unknown Anomaly':'normal'
+};
+
+async function loadFeed() {
+  try {
+    const alerts = await fetch('/api/alerts?n=12').then(r=>r.json());
+    const feed = document.getElementById('alertFeed');
+    if (!alerts.length) {
+      feed.innerHTML = '<div class="empty-state"><i class="fas fa-satellite-dish"></i><p>No threats detected yet.<br>Simulate traffic to begin.</p></div>';
+      return;
+    }
+    feed.innerHTML = alerts.map(a => {
+      const sc = SEV_CLASS[a.severity] || 'low';
+      const time = new Date(a.timestamp).toLocaleTimeString('en-US',{hour12:false});
+      const confPct = a.confidence;
+      return `<div class="feed-item">
+        <div class="feed-dot ${sc}"></div>
+        <div class="feed-text">
+          <div class="feed-title">${a.anomaly_type}</div>
+          <div class="feed-meta">
+            <span class="sev sev-${sc}">${a.severity}</span>
+            <span style="margin-left:8px" class="mono" style="font-size:10px">conf: ${confPct}%</span>
+          </div>
+          <div class="conf-bar-wrap" style="margin-top:5px">
+            <div class="conf-bar">
+              <div class="conf-fill ${sc==='critical'||sc==='high'?'danger':''}" style="width:${confPct}%"></div>
+            </div>
+            <span style="font-size:10px;color:var(--muted);font-family:var(--mono)">${confPct}%</span>
+          </div>
+        </div>
+        <div class="feed-time">${time}</div>
+      </div>`;
+    }).join('');
+
+    // Update last refresh
+    document.getElementById('lastRefresh').textContent = 'Updated ' + new Date().toLocaleTimeString('en-US',{hour12:false});
+  } catch(e) { console.error(e); }
+}
+
+async function loadThreatDist() {
+  try {
+    const s = await fetch('/api/stats').then(r=>r.json());
+    const el = document.getElementById('threatDist');
+    if (!s.total) { el.innerHTML = '<div class="empty-state" style="padding:20px"><i class="fas fa-chart-pie"></i><p>No data yet</p></div>'; return; }
+    const types = s.by_type || {};
+    const total = Object.values(types).reduce((a,b)=>a+b,0);
+    const colors = {'DoS / Flood Attack':'var(--danger)','Brute Force Attack':'var(--warn)','Port Scan':'var(--med)','Data Exfiltration':'#a78bfa','Unknown Anomaly':'var(--low)'};
+    el.innerHTML = Object.entries(types).map(([k,v])=>{
+      const pct = total ? Math.round(v/total*100) : 0;
+      const col = colors[k] || 'var(--accent)';
+      return `<div style="margin-bottom:12px">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+          <span style="font-size:12px;font-weight:500">${k}</span>
+          <span class="mono" style="font-size:11px;color:var(--muted)">${v} (${pct}%)</span>
+        </div>
+        <div class="progress-track" style="height:7px">
+          <div class="progress-fill" style="width:${pct}%;background:${col}"></div>
+        </div>
+      </div>`;
+    }).join('');
+  } catch(e) {}
+}
+
+async function simulateTraffic() {
+  const btn = document.getElementById('simBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right:6px"></i>Analyzing…';
+  const panel = document.getElementById('simPanel');
+  panel.innerHTML = '<div style="text-align:center;padding:40px;color:var(--muted)"><i class="fas fa-spinner fa-spin fa-lg"></i><p style="margin-top:12px;font-size:12px">Processing record…</p></div>';
+
+  try {
+    const d = await fetch('/api/simulate').then(r=>r.json());
+    const isAnomaly = d.prediction === 1;
+    const cls = isAnomaly ? 'anomaly' : 'normal';
+    const tc  = THREAT_CLASS[isAnomaly ? (d.alert?.anomaly_type||'') : 'Normal'] || 'normal';
+    const r   = d.record;
+
+    panel.innerHTML = `
+    <div class="sim-result-card ${cls} fade-in">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:36px;height:36px;border-radius:50%;background:${isAnomaly?'rgba(255,69,96,.12)':'rgba(0,224,158,.12)'};display:flex;align-items:center;justify-content:center;font-size:16px;${isAnomaly?'color:var(--danger)':'color:var(--ok)'}">
+            <i class="fas ${isAnomaly?'fa-triangle-exclamation':'fa-shield-check'}"></i>
+          </div>
+          <div>
+            <div style="font-weight:700;font-size:15px;color:${isAnomaly?'var(--danger)':'var(--ok)'}">${d.label}</div>
+            <div style="font-size:11px;color:var(--muted)">Simulated: <span class="mono">${d.simulated_type}</span></div>
+          </div>
+        </div>
+        ${isAnomaly && d.alert ? `<span class="sev sev-${(d.alert.severity||'').toLowerCase()}">${d.alert.severity}</span>` : '<span class="sev" style="background:rgba(0,224,158,.1);color:var(--ok);border-color:rgba(0,224,158,.3)">NORMAL</span>'}
+      </div>
+
+      ${isAnomaly && d.alert ? `
+      <div style="margin-bottom:12px">
+        <span class="threat-pill ${tc}"><i class="fas fa-biohazard" style="font-size:10px"></i>${d.alert.anomaly_type}</span>
+      </div>` : ''}
+
+      <div style="margin-bottom:10px">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;font-size:11px">
+          <span style="color:var(--muted)">Detection confidence</span>
+          <span class="mono" style="color:${isAnomaly?'var(--danger)':'var(--ok)'}">${d.confidence}%</span>
+        </div>
+        <div class="progress-track" style="height:8px">
+          <div class="progress-fill" style="width:${d.confidence}%;background:${isAnomaly?'linear-gradient(90deg,var(--danger),#ff8fa3)':'linear-gradient(90deg,var(--ok),#5dffd3)'}"></div>
+        </div>
+      </div>
+
+      <hr class="divider">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:11px">
+        <div style="background:var(--surface);padding:8px 10px;border-radius:7px;border:1px solid var(--border)">
+          <div style="color:var(--muted)">Bytes Sent</div>
+          <div class="mono" style="font-weight:600;margin-top:2px">${r.bytes_sent?.toLocaleString()}</div>
+        </div>
+        <div style="background:var(--surface);padding:8px 10px;border-radius:7px;border:1px solid var(--border)">
+          <div style="color:var(--muted)">Connections</div>
+          <div class="mono" style="font-weight:600;margin-top:2px">${r.num_connections}</div>
+        </div>
+        <div style="background:var(--surface);padding:8px 10px;border-radius:7px;border:1px solid var(--border)">
+          <div style="color:var(--muted)">Failed Logins</div>
+          <div class="mono" style="font-weight:600;margin-top:2px;color:${r.failed_logins>5?'var(--danger)':'inherit'}">${r.failed_logins}</div>
+        </div>
+        <div style="background:var(--surface);padding:8px 10px;border-radius:7px;border:1px solid var(--border)">
+          <div style="color:var(--muted)">Port</div>
+          <div class="mono" style="font-weight:600;margin-top:2px">${r.port}</div>
+        </div>
+      </div>
+    </div>`;
+
+    // Refresh stats and feed
+    const s = await fetch('/api/stats').then(r=>r.json());
+    document.getElementById('statTotal').textContent = s.total || 0;
+    document.getElementById('statCrit').textContent  = s.by_severity?.CRITICAL || 0;
+    document.getElementById('statHigh').textContent  = s.by_severity?.HIGH || 0;
+    loadFeed(); loadThreatDist();
+
+  } catch(e) {
+    document.getElementById('simPanel').innerHTML = `<div class="empty-state"><i class="fas fa-exclamation-circle" style="color:var(--danger)"></i><p>${e.message}</p></div>`;
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fas fa-bolt" style="margin-right:6px"></i>Simulate Traffic';
+  }
+}
+
+// Boot
+loadFeed();
+loadThreatDist();
+setInterval(loadFeed, 12000);
+setInterval(loadThreatDist, 15000);
+</script>
+{% endblock %}
+ENDOFFILE
+echo "dashboard.html written"

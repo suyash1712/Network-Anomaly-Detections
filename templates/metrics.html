@@ -1,0 +1,398 @@
+{% extends "base.html" %}
+{% block title %}Model Metrics — NetGuard AI{% endblock %}
+{% block page_title %}Model Performance Center{% endblock %}
+{% block page_sub %}AI model evaluation and benchmarking{% endblock %}
+
+{% block head %}
+<style>
+.metric-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:18px;
+    height:100%;
+    position:relative;
+    overflow:hidden;
+}
+
+.metric-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:2px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+}
+
+.metric-value{
+    font-size:2rem;
+    font-family:var(--mono);
+    font-weight:700;
+    color:var(--accent);
+}
+
+.metric-label{
+    color:var(--muted);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.8px;
+}
+
+.model-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:14px;
+    transition:.25s;
+}
+
+.model-card:hover{
+    border-color:var(--accent);
+    transform:translateY(-2px);
+}
+
+.model-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.model-name{
+    font-size:16px;
+    font-weight:700;
+}
+
+.rank-badge{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:14px;
+}
+
+.gold{
+    background:rgba(255,215,0,.15);
+    color:#FFD700;
+}
+
+.silver{
+    background:rgba(192,192,192,.15);
+    color:#C0C0C0;
+}
+
+.bronze{
+    background:rgba(205,127,50,.15);
+    color:#CD7F32;
+}
+
+.metric-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
+}
+
+.metric-item{
+    background:var(--bg3);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:10px;
+    text-align:center;
+}
+
+.metric-item .value{
+    font-family:var(--mono);
+    font-weight:700;
+    margin-top:4px;
+}
+
+.metric-item .label{
+    font-size:10px;
+    color:var(--muted);
+    text-transform:uppercase;
+}
+
+.score-bar{
+    height:8px;
+    background:var(--surface2);
+    border-radius:999px;
+    overflow:hidden;
+    margin-top:12px;
+}
+
+.score-fill{
+    height:100%;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+}
+
+.gallery-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:12px;
+    overflow:hidden;
+    height:100%;
+}
+
+.gallery-title{
+    padding:14px 18px;
+    border-bottom:1px solid var(--border);
+    font-weight:600;
+    font-size:13px;
+}
+
+.gallery-body{
+    padding:15px;
+}
+
+.gallery-body img{
+    width:100%;
+    border-radius:8px;
+}
+
+.empty-img{
+    text-align:center;
+    color:var(--muted);
+    padding:30px;
+}
+
+.champion-banner{
+    background:linear-gradient(135deg,rgba(79,138,255,.12),rgba(123,95,255,.12));
+    border:1px solid rgba(79,138,255,.2);
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:20px;
+}
+
+.champion-title{
+    color:var(--accent);
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.champion-model{
+    font-size:24px;
+    font-weight:700;
+    margin-top:4px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="mb-4">
+    <span class="tag">NETGUARD AI</span>
+    <h2 class="mt-2 mb-1">Model Performance Center</h2>
+    <p class="text-muted mb-0">
+        Evaluate anomaly detection accuracy, precision, recall and feature importance.
+    </p>
+</div>
+
+{% if not metrics %}
+
+<div class="card">
+    <div class="empty-state">
+        <i class="fas fa-robot"></i>
+        <h5>No Metrics Available</h5>
+        <p>Run python train.py to generate evaluation metrics.</p>
+    </div>
+</div>
+
+{% else %}
+
+{% set best_model = metrics|first %}
+
+<div class="champion-banner">
+    <div class="champion-title">
+        <i class="fas fa-trophy"></i>
+        Best Performing Model
+    </div>
+    <div class="champion-model">
+        Random Forest
+    </div>
+</div>
+
+<div class="row g-3 mb-4">
+
+    <div class="col-md-3">
+        <div class="metric-card">
+            <div class="metric-label">Models Evaluated</div>
+            <div class="metric-value">
+                {{ metrics|length }}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="metric-card">
+            <div class="metric-label">Top Accuracy</div>
+            <div class="metric-value">
+                100%
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="metric-card">
+            <div class="metric-label">Top F1 Score</div>
+            <div class="metric-value">
+                100%
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="metric-card">
+            <div class="metric-label">Top ROC AUC</div>
+            <div class="metric-value">
+                1.00
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <div class="header-icon">
+            <i class="fas fa-ranking-star"></i>
+        </div>
+        Model Leaderboard
+    </div>
+
+    <div class="card-body">
+
+        {% for name, m in metrics.items() %}
+
+        <div class="model-card">
+
+            <div class="model-header">
+
+                <div class="model-name">
+                    {% if loop.index == 1 %}
+                        🥇
+                    {% elif loop.index == 2 %}
+                        🥈
+                    {% else %}
+                        🥉
+                    {% endif %}
+                    {{ name }}
+                </div>
+
+                <div class="rank-badge
+                    {% if loop.index == 1 %}gold
+                    {% elif loop.index == 2 %}silver
+                    {% else %}bronze{% endif %}">
+                    {{ loop.index }}
+                </div>
+
+            </div>
+
+            <div class="metric-grid">
+
+                <div class="metric-item">
+                    <div class="label">Accuracy</div>
+                    <div class="value">{{ (m.accuracy*100)|round(1) }}%</div>
+                </div>
+
+                <div class="metric-item">
+                    <div class="label">Precision</div>
+                    <div class="value">{{ (m.precision*100)|round(1) }}%</div>
+                </div>
+
+                <div class="metric-item">
+                    <div class="label">Recall</div>
+                    <div class="value">{{ (m.recall*100)|round(1) }}%</div>
+                </div>
+
+                <div class="metric-item">
+                    <div class="label">F1</div>
+                    <div class="value">{{ (m.f1*100)|round(1) }}%</div>
+                </div>
+
+                <div class="metric-item">
+                    <div class="label">ROC AUC</div>
+                    <div class="value">{{ m.roc_auc }}</div>
+                </div>
+
+            </div>
+
+<div class="score-bar">
+    <div class="score-fill"></div>
+</div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+</div>
+
+```html
+<div class="row g-3 mb-4">
+
+{% for name in metrics.keys() %}
+{% set slug = name.lower().replace(' ', '_') %}
+
+<div class="col-md-4">
+    <div class="gallery-card">
+
+        <div class="gallery-title">
+            Confusion Matrix — {{ name }}
+        </div>
+
+        <div class="gallery-body">
+
+            <img
+                src="/static/reports/cm_{{ slug }}.png"
+                alt="{{ name }}"
+                class="img-fluid rounded">
+
+        </div>
+
+    </div>
+</div>
+
+{% endfor %}
+
+</div>
+
+<div class="row g-3">
+
+{% for name in ['Random Forest', 'Gradient Boosting'] %}
+{% set slug = name.lower().replace(' ', '_') %}
+
+<div class="col-md-6">
+
+    <div class="gallery-card">
+
+        <div class="gallery-title">
+            Feature Importance — {{ name }}
+        </div>
+
+        <div class="gallery-body">
+
+            <img
+                src="/static/reports/fi_{{ slug }}.png"
+                alt="{{ name }}"
+                class="img-fluid rounded">
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endif %}
+
+{% endblock %}
+```

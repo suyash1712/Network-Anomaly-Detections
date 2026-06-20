@@ -1,0 +1,3384 @@
+[
+  {
+    "timestamp": "2026-06-10T09:29:53.836433",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.69,
+      "bytes_sent": 133479.0,
+      "bytes_received": 456.0,
+      "packets_sent": 483.0,
+      "packets_received": 4.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 174.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:29:55.317435",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.12,
+      "bytes_sent": 93104.0,
+      "bytes_received": 449.0,
+      "packets_sent": 546.0,
+      "packets_received": 4.0,
+      "port": 80.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 131.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:29:55.548652",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.56,
+      "bytes_sent": 69321.0,
+      "bytes_received": 615.0,
+      "packets_sent": 413.0,
+      "packets_received": 3.0,
+      "port": 80.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 206.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:29:55.718634",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.84,
+      "bytes_sent": 105168.0,
+      "bytes_received": 370.0,
+      "packets_sent": 581.0,
+      "packets_received": 1.0,
+      "port": 80.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 186.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:29:55.815632",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.34,
+      "bytes_sent": 100697.0,
+      "bytes_received": 456.0,
+      "packets_sent": 435.0,
+      "packets_received": 3.0,
+      "port": 80.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 194.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:29:55.990792",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.32,
+      "bytes_sent": 119415.0,
+      "bytes_received": 471.0,
+      "packets_sent": 589.0,
+      "packets_received": 6.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 166.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:29:56.087920",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.19,
+      "bytes_sent": 103408.0,
+      "bytes_received": 474.0,
+      "packets_sent": 436.0,
+      "packets_received": 4.0,
+      "port": 80.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 147.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:29:56.770779",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 2.56,
+      "bytes_sent": 347.0,
+      "bytes_received": 247.0,
+      "packets_sent": 4.0,
+      "packets_received": 4.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 16.0,
+      "num_connections": 45.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:29:57.013013",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.63,
+      "bytes_sent": 283.0,
+      "bytes_received": 146.0,
+      "packets_sent": 3.0,
+      "packets_received": 4.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 15.0,
+      "num_connections": 55.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:29:57.284822",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.77,
+      "bytes_sent": 233.0,
+      "bytes_received": 247.0,
+      "packets_sent": 4.0,
+      "packets_received": 5.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 22.0,
+      "num_connections": 36.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:29:57.567760",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.02,
+      "bytes_sent": 169.0,
+      "bytes_received": 107.0,
+      "packets_sent": 4.0,
+      "packets_received": 0.0,
+      "port": 47824.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 150.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:29:57.831737",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.82,
+      "bytes_sent": 374.0,
+      "bytes_received": 252.0,
+      "packets_sent": 4.0,
+      "packets_received": 5.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 21.0,
+      "num_connections": 46.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:29:59.071150",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.68,
+      "bytes_sent": 72905.0,
+      "bytes_received": 462.0,
+      "packets_sent": 578.0,
+      "packets_received": 4.0,
+      "port": 443.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 226.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:29:59.303632",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 99.6,
+    "record": {
+      "duration": 0.79,
+      "bytes_sent": 408.0,
+      "bytes_received": 287.0,
+      "packets_sent": 4.0,
+      "packets_received": 3.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 20.0,
+      "num_connections": 60.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 99.6% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:01.315964",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.02,
+      "bytes_sent": 234.0,
+      "bytes_received": 118.0,
+      "packets_sent": 2.0,
+      "packets_received": 0.0,
+      "port": 20884.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 171.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:01.492400",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.06,
+      "bytes_sent": 184.0,
+      "bytes_received": 57.0,
+      "packets_sent": 1.0,
+      "packets_received": 1.0,
+      "port": 4974.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 182.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:01.696284",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 99.4,
+    "record": {
+      "duration": 2.82,
+      "bytes_sent": 228.0,
+      "bytes_received": 170.0,
+      "packets_sent": 7.0,
+      "packets_received": 3.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 25.0,
+      "num_connections": 47.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 99.4% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:01.852186",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.19,
+      "bytes_sent": 70460.0,
+      "bytes_received": 480.0,
+      "packets_sent": 481.0,
+      "packets_received": 6.0,
+      "port": 80.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 190.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:01.982914",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.14,
+      "bytes_sent": 250.0,
+      "bytes_received": 79.0,
+      "packets_sent": 3.0,
+      "packets_received": 0.0,
+      "port": 40953.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 136.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:02.220822",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.74,
+      "bytes_sent": 97059.0,
+      "bytes_received": 629.0,
+      "packets_sent": 490.0,
+      "packets_received": 6.0,
+      "port": 443.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 188.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:02.236943",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.04,
+      "bytes_sent": 138.0,
+      "bytes_received": 102.0,
+      "packets_sent": 4.0,
+      "packets_received": 0.0,
+      "port": 24855.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 169.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:02.496286",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 99.8,
+    "record": {
+      "duration": 1.47,
+      "bytes_sent": 104620.0,
+      "bytes_received": 795.0,
+      "packets_sent": 471.0,
+      "packets_received": 7.0,
+      "port": 443.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 189.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 99.8% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:02.914429",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.08,
+      "bytes_sent": 170.0,
+      "bytes_received": 94.0,
+      "packets_sent": 4.0,
+      "packets_received": 1.0,
+      "port": 27257.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 153.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:03.262876",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.11,
+      "bytes_sent": 139.0,
+      "bytes_received": 91.0,
+      "packets_sent": 3.0,
+      "packets_received": 0.0,
+      "port": 47201.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 145.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:03.664818",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.37,
+      "bytes_sent": 298.0,
+      "bytes_received": 218.0,
+      "packets_sent": 6.0,
+      "packets_received": 4.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 22.0,
+      "num_connections": 63.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:03.828319",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 96.3,
+    "record": {
+      "duration": 0.72,
+      "bytes_sent": 548.0,
+      "bytes_received": 206.0,
+      "packets_sent": 3.0,
+      "packets_received": 2.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 23.0,
+      "num_connections": 52.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 96.3% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:04.447448",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.68,
+      "bytes_sent": 103545.0,
+      "bytes_received": 411.0,
+      "packets_sent": 540.0,
+      "packets_received": 5.0,
+      "port": 443.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 220.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:04.547086",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.27,
+      "bytes_sent": 101264.0,
+      "bytes_received": 483.0,
+      "packets_sent": 523.0,
+      "packets_received": 5.0,
+      "port": 80.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 178.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:04.807280",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.13,
+      "bytes_sent": 220.0,
+      "bytes_received": 276.0,
+      "packets_sent": 3.0,
+      "packets_received": 3.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 17.0,
+      "num_connections": 63.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:06.066490",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.68,
+      "bytes_sent": 128764.0,
+      "bytes_received": 350.0,
+      "packets_sent": 398.0,
+      "packets_received": 4.0,
+      "port": 80.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 218.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:06.148552",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.57,
+      "bytes_sent": 213.0,
+      "bytes_received": 239.0,
+      "packets_sent": 3.0,
+      "packets_received": 3.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 16.0,
+      "num_connections": 69.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:06.856359",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.92,
+      "bytes_sent": 384.0,
+      "bytes_received": 157.0,
+      "packets_sent": 2.0,
+      "packets_received": 4.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 15.0,
+      "num_connections": 49.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:06.881076",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.97,
+      "bytes_sent": 158.0,
+      "bytes_received": 177.0,
+      "packets_sent": 5.0,
+      "packets_received": 3.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 19.0,
+      "num_connections": 60.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:07.297316",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.69,
+      "bytes_sent": 133479.0,
+      "bytes_received": 456.0,
+      "packets_sent": 483.0,
+      "packets_received": 4.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 174.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:08.956662",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.12,
+      "bytes_sent": 93104.0,
+      "bytes_received": 449.0,
+      "packets_sent": 546.0,
+      "packets_received": 4.0,
+      "port": 80.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 131.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:09.174298",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.56,
+      "bytes_sent": 69321.0,
+      "bytes_received": 615.0,
+      "packets_sent": 413.0,
+      "packets_received": 3.0,
+      "port": 80.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 206.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:09.372783",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.84,
+      "bytes_sent": 105168.0,
+      "bytes_received": 370.0,
+      "packets_sent": 581.0,
+      "packets_received": 1.0,
+      "port": 80.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 186.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:09.515980",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.34,
+      "bytes_sent": 100697.0,
+      "bytes_received": 456.0,
+      "packets_sent": 435.0,
+      "packets_received": 3.0,
+      "port": 80.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 194.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:09.717798",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.32,
+      "bytes_sent": 119415.0,
+      "bytes_received": 471.0,
+      "packets_sent": 589.0,
+      "packets_received": 6.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 166.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:09.834694",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.19,
+      "bytes_sent": 103408.0,
+      "bytes_received": 474.0,
+      "packets_sent": 436.0,
+      "packets_received": 4.0,
+      "port": 80.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 147.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:10.190832",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.08,
+      "bytes_sent": 175.0,
+      "bytes_received": 134.0,
+      "packets_sent": 3.0,
+      "packets_received": 0.0,
+      "port": 16959.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 147.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:10.337649",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.29,
+      "bytes_sent": 126344.0,
+      "bytes_received": 395.0,
+      "packets_sent": 469.0,
+      "packets_received": 5.0,
+      "port": 80.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 211.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:10.906460",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.06,
+      "bytes_sent": 233.0,
+      "bytes_received": 125.0,
+      "packets_sent": 3.0,
+      "packets_received": 1.0,
+      "port": 50970.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 156.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:12.178275",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 2.02,
+      "bytes_sent": 222.0,
+      "bytes_received": 291.0,
+      "packets_sent": 2.0,
+      "packets_received": 5.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 27.0,
+      "num_connections": 50.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:12.434027",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.82,
+      "bytes_sent": 374.0,
+      "bytes_received": 252.0,
+      "packets_sent": 4.0,
+      "packets_received": 5.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 21.0,
+      "num_connections": 46.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:14.125198",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.68,
+      "bytes_sent": 72905.0,
+      "bytes_received": 462.0,
+      "packets_sent": 578.0,
+      "packets_received": 4.0,
+      "port": 443.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 226.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:14.409722",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.16,
+      "bytes_sent": 235.0,
+      "bytes_received": 90.0,
+      "packets_sent": 4.0,
+      "packets_received": 1.0,
+      "port": 59626.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 130.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:14.523417",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.07,
+      "bytes_sent": 182.0,
+      "bytes_received": 95.0,
+      "packets_sent": 2.0,
+      "packets_received": 0.0,
+      "port": 15033.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 115.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:15.039895",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.01,
+      "bytes_sent": 249.0,
+      "bytes_received": 82.0,
+      "packets_sent": 3.0,
+      "packets_received": 0.0,
+      "port": 26076.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 148.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:15.373798",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.79,
+      "bytes_sent": 115009.0,
+      "bytes_received": 553.0,
+      "packets_sent": 533.0,
+      "packets_received": 6.0,
+      "port": 443.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 217.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:15.483325",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.0,
+      "bytes_sent": 234.0,
+      "bytes_received": 138.0,
+      "packets_sent": 2.0,
+      "packets_received": 1.0,
+      "port": 50023.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 155.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:15.597521",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 2.43,
+      "bytes_sent": 233.0,
+      "bytes_received": 378.0,
+      "packets_sent": 2.0,
+      "packets_received": 2.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 22.0,
+      "num_connections": 63.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:15.975408",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.02,
+      "bytes_sent": 234.0,
+      "bytes_received": 118.0,
+      "packets_sent": 2.0,
+      "packets_received": 0.0,
+      "port": 20884.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 171.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:16.205000",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.06,
+      "bytes_sent": 184.0,
+      "bytes_received": 57.0,
+      "packets_sent": 1.0,
+      "packets_received": 1.0,
+      "port": 4974.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 182.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:16.361908",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.7,
+      "bytes_sent": 308.0,
+      "bytes_received": 347.0,
+      "packets_sent": 5.0,
+      "packets_received": 4.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 20.0,
+      "num_connections": 34.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:16.383077",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 99.4,
+    "record": {
+      "duration": 2.82,
+      "bytes_sent": 228.0,
+      "bytes_received": 170.0,
+      "packets_sent": 7.0,
+      "packets_received": 3.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 25.0,
+      "num_connections": 47.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 99.4% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:16.904145",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.74,
+      "bytes_sent": 97059.0,
+      "bytes_received": 629.0,
+      "packets_sent": 490.0,
+      "packets_received": 6.0,
+      "port": 443.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 188.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:17.085082",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 99.8,
+    "record": {
+      "duration": 1.47,
+      "bytes_sent": 104620.0,
+      "bytes_received": 795.0,
+      "packets_sent": 471.0,
+      "packets_received": 7.0,
+      "port": 443.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 189.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 99.8% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:17.142551",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.45,
+      "bytes_sent": 91855.0,
+      "bytes_received": 400.0,
+      "packets_sent": 469.0,
+      "packets_received": 6.0,
+      "port": 80.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 209.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:17.962058",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 96.3,
+    "record": {
+      "duration": 0.72,
+      "bytes_sent": 548.0,
+      "bytes_received": 206.0,
+      "packets_sent": 3.0,
+      "packets_received": 2.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 23.0,
+      "num_connections": 52.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 96.3% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:18.559064",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.68,
+      "bytes_sent": 103545.0,
+      "bytes_received": 411.0,
+      "packets_sent": 540.0,
+      "packets_received": 5.0,
+      "port": 443.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 220.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:18.783290",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.07,
+      "bytes_sent": 231.0,
+      "bytes_received": 83.0,
+      "packets_sent": 3.0,
+      "packets_received": 0.0,
+      "port": 16036.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 169.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:19.021938",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 99.5,
+    "record": {
+      "duration": 2.85,
+      "bytes_sent": 316.0,
+      "bytes_received": 178.0,
+      "packets_sent": 3.0,
+      "packets_received": 3.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 12.0,
+      "num_connections": 52.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 99.5% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:19.269947",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.01,
+      "bytes_sent": 180.0,
+      "bytes_received": 135.0,
+      "packets_sent": 2.0,
+      "packets_received": 0.0,
+      "port": 41278.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 144.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:19.381855",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 2.23,
+      "bytes_sent": 407.0,
+      "bytes_received": 251.0,
+      "packets_sent": 6.0,
+      "packets_received": 5.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 18.0,
+      "num_connections": 36.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:20.048257",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.68,
+      "bytes_sent": 128764.0,
+      "bytes_received": 350.0,
+      "packets_sent": 398.0,
+      "packets_received": 4.0,
+      "port": 80.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 218.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:20.881801",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.92,
+      "bytes_sent": 384.0,
+      "bytes_received": 157.0,
+      "packets_sent": 2.0,
+      "packets_received": 4.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 15.0,
+      "num_connections": 49.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:21.027576",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 99.8,
+    "record": {
+      "duration": 1.65,
+      "bytes_sent": 109716.0,
+      "bytes_received": 585.0,
+      "packets_sent": 512.0,
+      "packets_received": 9.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 197.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 99.8% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:21.477225",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.2,
+      "bytes_sent": 117479.0,
+      "bytes_received": 569.0,
+      "packets_sent": 472.0,
+      "packets_received": 3.0,
+      "port": 443.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 224.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:22.777888",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.09,
+      "bytes_sent": 79090.0,
+      "bytes_received": 483.0,
+      "packets_sent": 556.0,
+      "packets_received": 8.0,
+      "port": 80.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 160.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:23.630757",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.08,
+      "bytes_sent": 175.0,
+      "bytes_received": 134.0,
+      "packets_sent": 3.0,
+      "packets_received": 0.0,
+      "port": 16959.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 147.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:23.783996",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.29,
+      "bytes_sent": 126344.0,
+      "bytes_received": 395.0,
+      "packets_sent": 469.0,
+      "packets_received": 5.0,
+      "port": 80.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 211.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:24.094517",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.22,
+      "bytes_sent": 255.0,
+      "bytes_received": 59.0,
+      "packets_sent": 4.0,
+      "packets_received": 1.0,
+      "port": 12494.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 143.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:24.198141",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.06,
+      "bytes_sent": 233.0,
+      "bytes_received": 125.0,
+      "packets_sent": 3.0,
+      "packets_received": 1.0,
+      "port": 50970.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 156.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:24.581319",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.5,
+      "bytes_sent": 124882.0,
+      "bytes_received": 626.0,
+      "packets_sent": 646.0,
+      "packets_received": 7.0,
+      "port": 443.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 224.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:24.835555",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 2.02,
+      "bytes_sent": 222.0,
+      "bytes_received": 291.0,
+      "packets_sent": 2.0,
+      "packets_received": 5.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 27.0,
+      "num_connections": 50.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:24.854074",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.43,
+      "bytes_sent": 100573.0,
+      "bytes_received": 577.0,
+      "packets_sent": 563.0,
+      "packets_received": 4.0,
+      "port": 80.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 155.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:26.253399",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.01,
+      "bytes_sent": 151.0,
+      "bytes_received": 80.0,
+      "packets_sent": 3.0,
+      "packets_received": 0.0,
+      "port": 21623.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 127.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:26.798372",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.16,
+      "bytes_sent": 235.0,
+      "bytes_received": 90.0,
+      "packets_sent": 4.0,
+      "packets_received": 1.0,
+      "port": 59626.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 130.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:26.915766",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.07,
+      "bytes_sent": 182.0,
+      "bytes_received": 95.0,
+      "packets_sent": 2.0,
+      "packets_received": 0.0,
+      "port": 15033.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 115.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:27.026863",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.06,
+      "bytes_sent": 116.0,
+      "bytes_received": 145.0,
+      "packets_sent": 2.0,
+      "packets_received": 1.0,
+      "port": 4499.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 148.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:27.255628",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.01,
+      "bytes_sent": 249.0,
+      "bytes_received": 82.0,
+      "packets_sent": 3.0,
+      "packets_received": 0.0,
+      "port": 26076.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 148.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:27.556866",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.79,
+      "bytes_sent": 115009.0,
+      "bytes_received": 553.0,
+      "packets_sent": 533.0,
+      "packets_received": 6.0,
+      "port": 443.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 217.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:27.720158",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.0,
+      "bytes_sent": 234.0,
+      "bytes_received": 138.0,
+      "packets_sent": 2.0,
+      "packets_received": 1.0,
+      "port": 50023.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 155.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:27.861749",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 2.43,
+      "bytes_sent": 233.0,
+      "bytes_received": 378.0,
+      "packets_sent": 2.0,
+      "packets_received": 2.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 22.0,
+      "num_connections": 63.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:28.684091",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.06,
+      "bytes_sent": 65662.0,
+      "bytes_received": 453.0,
+      "packets_sent": 567.0,
+      "packets_received": 4.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 124.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:28.811313",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.53,
+      "bytes_sent": 112351.0,
+      "bytes_received": 278.0,
+      "packets_sent": 330.0,
+      "packets_received": 4.0,
+      "port": 80.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 203.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:29.028778",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.7,
+      "bytes_sent": 308.0,
+      "bytes_received": 347.0,
+      "packets_sent": 5.0,
+      "packets_received": 4.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 20.0,
+      "num_connections": 34.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:29.823232",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.35,
+      "bytes_sent": 67683.0,
+      "bytes_received": 669.0,
+      "packets_sent": 525.0,
+      "packets_received": 5.0,
+      "port": 80.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 200.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:29.974351",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.45,
+      "bytes_sent": 91855.0,
+      "bytes_received": 400.0,
+      "packets_sent": 469.0,
+      "packets_received": 6.0,
+      "port": 80.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 209.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:30.511580",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.06,
+      "bytes_sent": 127.0,
+      "bytes_received": 86.0,
+      "packets_sent": 2.0,
+      "packets_received": 1.0,
+      "port": 3783.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 164.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:31.915838",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.07,
+      "bytes_sent": 231.0,
+      "bytes_received": 83.0,
+      "packets_sent": 3.0,
+      "packets_received": 0.0,
+      "port": 16036.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 169.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:32.044570",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 99.5,
+    "record": {
+      "duration": 2.85,
+      "bytes_sent": 316.0,
+      "bytes_received": 178.0,
+      "packets_sent": 3.0,
+      "packets_received": 3.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 12.0,
+      "num_connections": 52.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 99.5% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:32.228765",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.01,
+      "bytes_sent": 180.0,
+      "bytes_received": 135.0,
+      "packets_sent": 2.0,
+      "packets_received": 0.0,
+      "port": 41278.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 144.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:32.331058",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 2.23,
+      "bytes_sent": 407.0,
+      "bytes_received": 251.0,
+      "packets_sent": 6.0,
+      "packets_received": 5.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 18.0,
+      "num_connections": 36.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:33.047596",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.09,
+      "bytes_sent": 179.0,
+      "bytes_received": 86.0,
+      "packets_sent": 3.0,
+      "packets_received": 0.0,
+      "port": 40002.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 145.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:33.173339",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.02,
+      "bytes_sent": 271.0,
+      "bytes_received": 110.0,
+      "packets_sent": 2.0,
+      "packets_received": 1.0,
+      "port": 3235.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 132.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:33.284030",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.03,
+      "bytes_sent": 208.0,
+      "bytes_received": 75.0,
+      "packets_sent": 2.0,
+      "packets_received": 0.0,
+      "port": 11195.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 123.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:33.475311",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 99.8,
+    "record": {
+      "duration": 1.65,
+      "bytes_sent": 109716.0,
+      "bytes_received": 585.0,
+      "packets_sent": 512.0,
+      "packets_received": 9.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 197.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 99.8% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:33.748277",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.26,
+      "bytes_sent": 112232.0,
+      "bytes_received": 538.0,
+      "packets_sent": 482.0,
+      "packets_received": 1.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 209.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:33.852379",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.2,
+      "bytes_sent": 117479.0,
+      "bytes_received": 569.0,
+      "packets_sent": 472.0,
+      "packets_received": 3.0,
+      "port": 443.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 224.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:34.470974",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.62,
+      "bytes_sent": 132298.0,
+      "bytes_received": 622.0,
+      "packets_sent": 533.0,
+      "packets_received": 6.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 267.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:34.665014",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 99.4,
+    "record": {
+      "duration": 2.83,
+      "bytes_sent": 235.0,
+      "bytes_received": 294.0,
+      "packets_sent": 7.0,
+      "packets_received": 5.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 21.0,
+      "num_connections": 39.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 99.4% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:35.088805",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.08,
+      "bytes_sent": 87267.0,
+      "bytes_received": 526.0,
+      "packets_sent": 532.0,
+      "packets_received": 3.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 248.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:35.231975",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.09,
+      "bytes_sent": 79090.0,
+      "bytes_received": 483.0,
+      "packets_sent": 556.0,
+      "packets_received": 8.0,
+      "port": 80.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 160.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:35.688132",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.11,
+      "bytes_sent": 81536.0,
+      "bytes_received": 416.0,
+      "packets_sent": 512.0,
+      "packets_received": 5.0,
+      "port": 80.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 195.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:36.228306",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.06,
+      "bytes_sent": 238.0,
+      "bytes_received": 115.0,
+      "packets_sent": 1.0,
+      "packets_received": 0.0,
+      "port": 26068.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 183.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:36.597354",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.22,
+      "bytes_sent": 255.0,
+      "bytes_received": 59.0,
+      "packets_sent": 4.0,
+      "packets_received": 1.0,
+      "port": 12494.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 143.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:36.623136",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.78,
+      "bytes_sent": 419.0,
+      "bytes_received": 216.0,
+      "packets_sent": 2.0,
+      "packets_received": 4.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 23.0,
+      "num_connections": 39.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:36.956514",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 2.66,
+      "bytes_sent": 416.0,
+      "bytes_received": 257.0,
+      "packets_sent": 5.0,
+      "packets_received": 4.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 19.0,
+      "num_connections": 54.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:37.259212",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.5,
+      "bytes_sent": 124882.0,
+      "bytes_received": 626.0,
+      "packets_sent": 646.0,
+      "packets_received": 7.0,
+      "port": 443.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 224.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:37.622404",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.43,
+      "bytes_sent": 100573.0,
+      "bytes_received": 577.0,
+      "packets_sent": 563.0,
+      "packets_received": 4.0,
+      "port": 80.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 155.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:38.535497",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 99.0,
+    "record": {
+      "duration": 1.16,
+      "bytes_sent": 399.0,
+      "bytes_received": 344.0,
+      "packets_sent": 6.0,
+      "packets_received": 2.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 19.0,
+      "num_connections": 42.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 99.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:38.766340",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.18,
+      "bytes_sent": 81265.0,
+      "bytes_received": 608.0,
+      "packets_sent": 526.0,
+      "packets_received": 3.0,
+      "port": 80.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 154.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:38.984517",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.01,
+      "bytes_sent": 151.0,
+      "bytes_received": 80.0,
+      "packets_sent": 3.0,
+      "packets_received": 0.0,
+      "port": 21623.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 127.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:39.447345",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.02,
+      "bytes_sent": 158.0,
+      "bytes_received": 112.0,
+      "packets_sent": 3.0,
+      "packets_received": 1.0,
+      "port": 62440.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 141.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:39.836742",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.06,
+      "bytes_sent": 116.0,
+      "bytes_received": 145.0,
+      "packets_sent": 2.0,
+      "packets_received": 1.0,
+      "port": 4499.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 148.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:40.104629",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.03,
+      "bytes_sent": 77117.0,
+      "bytes_received": 381.0,
+      "packets_sent": 417.0,
+      "packets_received": 3.0,
+      "port": 80.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 198.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:40.419308",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.96,
+      "bytes_sent": 336.0,
+      "bytes_received": 193.0,
+      "packets_sent": 6.0,
+      "packets_received": 5.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 22.0,
+      "num_connections": 64.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:40.619684",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 99.8,
+    "record": {
+      "duration": 0.03,
+      "bytes_sent": 91643.0,
+      "bytes_received": 736.0,
+      "packets_sent": 442.0,
+      "packets_received": 1.0,
+      "port": 80.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 243.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 99.8% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:41.101311",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.2,
+      "bytes_sent": 215.0,
+      "bytes_received": 117.0,
+      "packets_sent": 4.0,
+      "packets_received": 1.0,
+      "port": 19885.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 171.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:41.622202",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.06,
+      "bytes_sent": 65662.0,
+      "bytes_received": 453.0,
+      "packets_sent": 567.0,
+      "packets_received": 4.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 124.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:41.794774",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.53,
+      "bytes_sent": 112351.0,
+      "bytes_received": 278.0,
+      "packets_sent": 330.0,
+      "packets_received": 4.0,
+      "port": 80.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 203.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:42.614015",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 2.19,
+      "bytes_sent": 436.0,
+      "bytes_received": 276.0,
+      "packets_sent": 2.0,
+      "packets_received": 4.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 24.0,
+      "num_connections": 35.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:43.280796",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.35,
+      "bytes_sent": 67683.0,
+      "bytes_received": 669.0,
+      "packets_sent": 525.0,
+      "packets_received": 5.0,
+      "port": 80.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 200.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:44.076999",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.06,
+      "bytes_sent": 127.0,
+      "bytes_received": 86.0,
+      "packets_sent": 2.0,
+      "packets_received": 1.0,
+      "port": 3783.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 164.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:45.401877",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.02,
+      "bytes_sent": 168.0,
+      "bytes_received": 99.0,
+      "packets_sent": 2.0,
+      "packets_received": 0.0,
+      "port": 7571.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 175.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:46.600787",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.88,
+      "bytes_sent": 81927.0,
+      "bytes_received": 408.0,
+      "packets_sent": 579.0,
+      "packets_received": 5.0,
+      "port": 80.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 164.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:47.395811",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.09,
+      "bytes_sent": 179.0,
+      "bytes_received": 86.0,
+      "packets_sent": 3.0,
+      "packets_received": 0.0,
+      "port": 40002.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 145.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:47.579235",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.02,
+      "bytes_sent": 271.0,
+      "bytes_received": 110.0,
+      "packets_sent": 2.0,
+      "packets_received": 1.0,
+      "port": 3235.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 132.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:47.994666",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.03,
+      "bytes_sent": 208.0,
+      "bytes_received": 75.0,
+      "packets_sent": 2.0,
+      "packets_received": 0.0,
+      "port": 11195.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 123.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:48.429978",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.0,
+      "bytes_sent": 177.0,
+      "bytes_received": 89.0,
+      "packets_sent": 2.0,
+      "packets_received": 0.0,
+      "port": 48634.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 181.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:48.612270",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.0,
+      "bytes_sent": 180.0,
+      "bytes_received": 88.0,
+      "packets_sent": 3.0,
+      "packets_received": 1.0,
+      "port": 7737.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 165.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:48.863103",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.26,
+      "bytes_sent": 112232.0,
+      "bytes_received": 538.0,
+      "packets_sent": 482.0,
+      "packets_received": 1.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 209.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:49.020401",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.03,
+      "bytes_sent": 158.0,
+      "bytes_received": 115.0,
+      "packets_sent": 3.0,
+      "packets_received": 1.0,
+      "port": 55324.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 121.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:49.378356",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.07,
+      "bytes_sent": 124230.0,
+      "bytes_received": 466.0,
+      "packets_sent": 498.0,
+      "packets_received": 6.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 165.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:49.915071",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.37,
+      "bytes_sent": 92406.0,
+      "bytes_received": 572.0,
+      "packets_sent": 527.0,
+      "packets_received": 6.0,
+      "port": 80.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 216.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:50.165007",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.62,
+      "bytes_sent": 132298.0,
+      "bytes_received": 622.0,
+      "packets_sent": 533.0,
+      "packets_received": 6.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 267.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:50.507362",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 99.4,
+    "record": {
+      "duration": 2.83,
+      "bytes_sent": 235.0,
+      "bytes_received": 294.0,
+      "packets_sent": 7.0,
+      "packets_received": 5.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 21.0,
+      "num_connections": 39.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 99.4% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:50.999632",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.65,
+      "bytes_sent": 272.0,
+      "bytes_received": 199.0,
+      "packets_sent": 2.0,
+      "packets_received": 5.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 17.0,
+      "num_connections": 35.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:51.096258",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.08,
+      "bytes_sent": 87267.0,
+      "bytes_received": 526.0,
+      "packets_sent": 532.0,
+      "packets_received": 3.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 248.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:51.136496",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.12,
+      "bytes_sent": 193.0,
+      "bytes_received": 95.0,
+      "packets_sent": 4.0,
+      "packets_received": 1.0,
+      "port": 38716.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 152.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:51.223495",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.17,
+      "bytes_sent": 221.0,
+      "bytes_received": 112.0,
+      "packets_sent": 2.0,
+      "packets_received": 1.0,
+      "port": 6495.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 127.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:51.727453",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.11,
+      "bytes_sent": 81536.0,
+      "bytes_received": 416.0,
+      "packets_sent": 512.0,
+      "packets_received": 5.0,
+      "port": 80.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 195.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:52.002397",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.35,
+      "bytes_sent": 105134.0,
+      "bytes_received": 566.0,
+      "packets_sent": 434.0,
+      "packets_received": 6.0,
+      "port": 443.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 237.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-10T09:30:52.176511",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.14,
+      "bytes_sent": 146.0,
+      "bytes_received": 79.0,
+      "packets_sent": 3.0,
+      "packets_received": 1.0,
+      "port": 28646.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 143.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:12:56.021275",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.36,
+      "bytes_sent": 102668.0,
+      "bytes_received": 472.0,
+      "packets_sent": 482.0,
+      "packets_received": 1.0,
+      "port": 443.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 243.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:12:56.258217",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.77,
+      "bytes_sent": 96107.0,
+      "bytes_received": 327.0,
+      "packets_sent": 473.0,
+      "packets_received": 2.0,
+      "port": 80.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 230.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:12:56.833573",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.47,
+      "bytes_sent": 123097.0,
+      "bytes_received": 232.0,
+      "packets_sent": 455.0,
+      "packets_received": 7.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 216.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:12:57.289408",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.05,
+      "bytes_sent": 144.0,
+      "bytes_received": 114.0,
+      "packets_sent": 1.0,
+      "packets_received": 1.0,
+      "port": 26989.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 149.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:12:57.420546",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.01,
+      "bytes_sent": 222.0,
+      "bytes_received": 128.0,
+      "packets_sent": 3.0,
+      "packets_received": 1.0,
+      "port": 7890.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 149.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:12:57.771968",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.02,
+      "bytes_sent": 202.0,
+      "bytes_received": 110.0,
+      "packets_sent": 2.0,
+      "packets_received": 0.0,
+      "port": 24480.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 187.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:12:58.783060",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.24,
+      "bytes_sent": 107757.0,
+      "bytes_received": 623.0,
+      "packets_sent": 499.0,
+      "packets_received": 8.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 176.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:12:58.866796",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.58,
+      "bytes_sent": 103128.0,
+      "bytes_received": 625.0,
+      "packets_sent": 573.0,
+      "packets_received": 4.0,
+      "port": 443.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 212.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:12:58.956599",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 99.8,
+    "record": {
+      "duration": 0.14,
+      "bytes_sent": 169.0,
+      "bytes_received": 71.0,
+      "packets_sent": 5.0,
+      "packets_received": 0.0,
+      "port": 37227.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 165.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 99.8% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:12:59.411498",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 2.09,
+      "bytes_sent": 170.0,
+      "bytes_received": 167.0,
+      "packets_sent": 5.0,
+      "packets_received": 4.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 25.0,
+      "num_connections": 37.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:00.107492",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.2,
+      "bytes_sent": 109733.0,
+      "bytes_received": 523.0,
+      "packets_sent": 481.0,
+      "packets_received": 2.0,
+      "port": 443.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 196.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:00.354016",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 83.0,
+    "record": {
+      "duration": 1.13,
+      "bytes_sent": 86166.0,
+      "bytes_received": 516.0,
+      "packets_sent": 406.0,
+      "packets_received": 11.0,
+      "port": 80.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 218.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 83.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:00.431102",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.28,
+      "bytes_sent": 119645.0,
+      "bytes_received": 578.0,
+      "packets_sent": 569.0,
+      "packets_received": 5.0,
+      "port": 80.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 160.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:00.630659",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.07,
+      "bytes_sent": 240.0,
+      "bytes_received": 69.0,
+      "packets_sent": 2.0,
+      "packets_received": 0.0,
+      "port": 3517.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 135.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:01.720908",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.01,
+      "bytes_sent": 180.0,
+      "bytes_received": 90.0,
+      "packets_sent": 2.0,
+      "packets_received": 1.0,
+      "port": 17843.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 137.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:01.903690",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.8,
+      "bytes_sent": 435.0,
+      "bytes_received": 285.0,
+      "packets_sent": 4.0,
+      "packets_received": 5.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 19.0,
+      "num_connections": 44.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:02.271087",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 99.9,
+    "record": {
+      "duration": 0.12,
+      "bytes_sent": 315.0,
+      "bytes_received": 109.0,
+      "packets_sent": 2.0,
+      "packets_received": 1.0,
+      "port": 47118.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 164.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 99.9% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:02.977918",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.34,
+      "bytes_sent": 118809.0,
+      "bytes_received": 547.0,
+      "packets_sent": 429.0,
+      "packets_received": 0.0,
+      "port": 443.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 223.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:04.271642",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 1.6,
+      "bytes_sent": 339.0,
+      "bytes_received": 317.0,
+      "packets_sent": 5.0,
+      "packets_received": 4.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 19.0,
+      "num_connections": 41.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:04.534299",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.18,
+      "bytes_sent": 245.0,
+      "bytes_received": 105.0,
+      "packets_sent": 1.0,
+      "packets_received": 1.0,
+      "port": 50612.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 145.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:04.920123",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.98,
+      "bytes_sent": 129516.0,
+      "bytes_received": 486.0,
+      "packets_sent": 498.0,
+      "packets_received": 6.0,
+      "port": 443.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 204.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:05.589439",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 99.5,
+    "record": {
+      "duration": 2.63,
+      "bytes_sent": 402.0,
+      "bytes_received": 402.0,
+      "packets_sent": 4.0,
+      "packets_received": 4.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 18.0,
+      "num_connections": 54.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 99.5% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:05.685596",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.65,
+      "bytes_sent": 102008.0,
+      "bytes_received": 331.0,
+      "packets_sent": 549.0,
+      "packets_received": 2.0,
+      "port": 443.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 162.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:05.783073",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 2.08,
+      "bytes_sent": 111.0,
+      "bytes_received": 56.0,
+      "packets_sent": 5.0,
+      "packets_received": 2.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 18.0,
+      "num_connections": 46.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:05.882221",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.53,
+      "bytes_sent": 118862.0,
+      "bytes_received": 401.0,
+      "packets_sent": 512.0,
+      "packets_received": 2.0,
+      "port": 443.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 236.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:06.103869",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.41,
+      "bytes_sent": 84017.0,
+      "bytes_received": 609.0,
+      "packets_sent": 546.0,
+      "packets_received": 4.0,
+      "port": 443.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 185.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:06.884584",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.44,
+      "bytes_sent": 68928.0,
+      "bytes_received": 507.0,
+      "packets_sent": 582.0,
+      "packets_received": 7.0,
+      "port": 443.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 215.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:07.792410",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.01,
+      "bytes_sent": 124794.0,
+      "bytes_received": 505.0,
+      "packets_sent": 474.0,
+      "packets_received": 6.0,
+      "port": 443.0,
+      "protocol": 2.0,
+      "failed_logins": 0.0,
+      "num_connections": 214.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:08.348158",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.04,
+      "bytes_sent": 240.0,
+      "bytes_received": 38.0,
+      "packets_sent": 2.0,
+      "packets_received": 0.0,
+      "port": 56058.0,
+      "protocol": 0.0,
+      "failed_logins": 0.0,
+      "num_connections": 146.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:09.211514",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.03,
+      "bytes_sent": 203.0,
+      "bytes_received": 117.0,
+      "packets_sent": 2.0,
+      "packets_received": 1.0,
+      "port": 6286.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 116.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:09.354433",
+    "severity": "CRITICAL",
+    "anomaly_type": "Brute Force Attack",
+    "confidence": 99.8,
+    "record": {
+      "duration": 1.51,
+      "bytes_sent": 193.0,
+      "bytes_received": 350.0,
+      "packets_sent": 6.0,
+      "packets_received": 3.0,
+      "port": 22.0,
+      "protocol": 0.0,
+      "failed_logins": 22.0,
+      "num_connections": 52.0,
+      "label": 1.0
+    },
+    "message": "[CRITICAL] Brute Force Attack detected with 99.8% confidence."
+  },
+  {
+    "timestamp": "2026-06-15T11:13:09.674746",
+    "severity": "HIGH",
+    "anomaly_type": "DoS / Flood Attack",
+    "confidence": 100.0,
+    "record": {
+      "duration": 0.12,
+      "bytes_sent": 163.0,
+      "bytes_received": 121.0,
+      "packets_sent": 2.0,
+      "packets_received": 0.0,
+      "port": 13171.0,
+      "protocol": 1.0,
+      "failed_logins": 0.0,
+      "num_connections": 181.0,
+      "label": 1.0
+    },
+    "message": "[HIGH] DoS / Flood Attack detected with 100.0% confidence."
+  }
+]
